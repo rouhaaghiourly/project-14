@@ -11,7 +11,9 @@ function preload(){
   arrowImage = loadImage("arrow0.png");
   bowImage = loadImage("bow0.png");
   red_balloonImage = loadImage("red_balloon0.png");
-  
+  blue_balloonImage = loadImage("blue_balloon0.png");
+  green_balloonImage = loadImage("green_balloon0.png");
+  pink_balloonImage = loadImage("pink_balloon0.png");
 }
 
 
@@ -51,7 +53,7 @@ function draw() {
   }
   
   //creating continous balloons
-  var select_balloon = Math.round(random(1,1));
+  var select_balloon = Math.round(random(1,4));
   
   if (World.frameCount % 100 == 0) {
     if (select_balloon == 1) {
@@ -117,7 +119,7 @@ function greenBalloon() {
 function pinkBalloon() {
   //write code for spwaning pink balloons
    var pink = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  red.addImage(pink_balloonImage);
+  pink.addImage(pink_balloonImage);
   pink.velocityX = 3;
   pink.lifetime = 150;
   pink.scale = 0.1;
